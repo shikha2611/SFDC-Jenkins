@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
@@ -88,9 +89,14 @@ public class BaseTest {
 			driver = new ChromeDriver();
 			break;
 
-		case "edge":
+		case "Edge":
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
+			break;
+			
+		case "firefox":
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
 			break;
 
 		default:
