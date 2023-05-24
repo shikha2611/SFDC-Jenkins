@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.sfdcFramewrok</groupId>
 	<artifactId>sfdcFramework</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.1.1-SNAPSHOT</version>
 
 	<build>
 		<pluginManagement>
@@ -39,6 +39,12 @@
 			<version>4.8.2</version>
 		</dependency>
 
+<dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <optional>true</optional>
+</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
@@ -68,12 +74,6 @@
 			<version>5.2.3</version>
 			<scope>test</scope>
 		</dependency>
-<dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.24</version>
-            <optional>true</optional>
-</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 		<dependency>

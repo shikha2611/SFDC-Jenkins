@@ -85,7 +85,7 @@ public class BaseTest {
 			WebDriverManager.chromedriver().setup();
 			if (headless) {
 				ChromeOptions co = new ChromeOptions();
-				co.addArguments("--headless");
+//				co.addArguments("--headless");
 				 driver = new ChromeDriver(co);
 			} else {
 				driver = new ChromeDriver();
@@ -96,7 +96,7 @@ public class BaseTest {
 			WebDriverManager.edgedriver().setup();
 			if (headless) {
 				EdgeOptions eo = new EdgeOptions();
-				eo.addArguments("--headless");
+//				eo.addArguments("--headless");
 				driver = new EdgeDriver(eo);
 			} else {
 				driver = new EdgeDriver();
