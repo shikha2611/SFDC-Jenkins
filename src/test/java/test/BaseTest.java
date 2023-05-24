@@ -80,31 +80,43 @@ public class BaseTest {
 	}
 
 	public static WebDriver getBrowserDriver(String browsername) {
-
-		String browser = browsername.toLowerCase();
 		WebDriver driver = null;
-		switch (browser) {
-		case "chrome":
-			WebDriverManager.chromedriver().setup();
+		if (browsername.toLowerCase().contains("chrome")) {
 			driver = new ChromeDriver();
-			break;
-
-		case "Edge":
-			WebDriverManager.edgedriver().setup();
+		} else if (browsername.toLowerCase().contains("microsoftedge")) {
 			driver = new EdgeDriver();
-			break;
-			
-		case "firefox":
-			WebDriverManager.firefoxdriver().setup();
+		} else if (browsername.toLowerCase().contains("firefox")) {
 			driver = new FirefoxDriver();
-			break;
-
-		default:
-			System.out.println("Please use either Chrome or edge broswer");
-
 		}
 		driver.manage().window().maximize();
 		return driver;
+
+		
+		
+//		String browser = browsername.toLowerCase();
+//		WebDriver driver = null;
+//		switch (browser) {
+//		case "chrome":
+//			WebDriverManager.chromedriver().setup();
+//			driver = new ChromeDriver();
+//			break;
+//
+//		case "Edge":
+//			WebDriverManager.edgedriver().setup();
+//			driver = new EdgeDriver();
+//			break;
+//			
+//		case "firefox":
+//			WebDriverManager.firefoxdriver().setup();
+//			driver = new FirefoxDriver();
+//			break;
+//
+//		default:
+//			System.out.println("Please use either Chrome or edge broswer");
+//
+//		}
+//		driver.manage().window().maximize();
+//		return driver;
 
 	}
 
