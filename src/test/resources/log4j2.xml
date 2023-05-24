@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<!-- Will create the folder with the name log and also look for the property filename-->
+	<Properties>
+		<Property name="filename">./log</Property>
+	</Properties>
+
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n>"/>
+		</Console>
+
+		<!--Here name="file"  is the name of the appender and the fileName="${filename}/logdemo.log" is the name of 
+		file where the log has to be written-->
+		
+		<RollingFile name="file" fileName="${filename}/logdemo.log" filePattern="${filename}/newlogdemo-%d{HH-mm-ss-SSS}.log">
+
+			<!-- the pattern in which the logs(statements) will be stored in the newly created file 
+		             and the old logs will be pushed to the newly created file-->
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+			<SizeBasedTriggeringPolicy size="1MB"/>
+		</RollingFile>
+
+	</Appenders>
+	<Loggers>
+		<Root level="debug">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="file" />
+		</Root>
+	</Loggers>
+</Configuration>

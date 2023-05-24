@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-05-24T12:33:44 MDT" name="Default suite" finished-at="2023-05-24T12:34:16 MDT" duration-ms="32664">
+    <groups>
+      <group name="regression">
+        <method signature="UserMenuTest.userMenuLogout_Tc_09(java.lang.reflect.Method)[pri:0, instance:test.UserMenuTest@2dd29a59]" name="userMenuLogout_Tc_09" class="test.UserMenuTest"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="UserMenuTest.userMenuDropDown_TC05()[pri:0, instance:test.UserMenuTest@2dd29a59]" name="userMenuDropDown_TC05" class="test.UserMenuTest"/>
+        <method signature="UserMenuTest.userMenuLogout_Tc_09(java.lang.reflect.Method)[pri:0, instance:test.UserMenuTest@2dd29a59]" name="userMenuLogout_Tc_09" class="test.UserMenuTest"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2023-05-24T12:33:44 MDT" name="Default test" finished-at="2023-05-24T12:34:16 MDT" duration-ms="32664">
+      <class name="test.UserMenuTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.UserMenuTest@2dd29a59]" started-at="2023-05-24T12:33:43 MDT" name="setUp" finished-at="2023-05-24T12:33:44 MDT" duration-ms="155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setDriver()[pri:0, instance:test.UserMenuTest@2dd29a59]" started-at="2023-05-24T12:33:44 MDT" name="setDriver" finished-at="2023-05-24T12:33:46 MDT" duration-ms="1922" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriver -->
+        <test-method signature="userMenuDropDownDeveloperConsole_TC08(java.lang.reflect.Method)[pri:0, instance:test.UserMenuTest@2dd29a59]" started-at="2023-05-24T12:33:46 MDT" name="userMenuDropDownDeveloperConsole_TC08" finished-at="2023-05-24T12:33:56 MDT" duration-ms="10746" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.UserMenuTest.userMenuDropDownDeveloperConsole_TC08(java.lang.reflect.Method) throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userMenuDropDownDeveloperConsole_TC08 -->
+        <test-method is-config="true" signature="removeDriver()[pri:0, instance:test.UserMenuTest@2dd29a59]" started-at="2023-05-24T12:33:56 MDT" name="removeDriver" finished-at="2023-05-24T12:33:56 MDT" duration-ms="198" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeDriver -->
+        <test-method is-config="true" signature="setDriver()[pri:0, instance:test.UserMenuTest@2dd29a59]" started-at="2023-05-24T12:33:56 MDT" name="setDriver" finished-at="2023-05-24T12:33:57 MDT" duration-ms="696" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriver -->
+        <test-method signature="userMenuDropDown_TC05()[pri:0, instance:test.UserMenuTest@2dd29a59]" started-at="2023-05-24T12:33:57 MDT" name="userMenuDropDown_TC05" finished-at="2023-05-24T12:34:06 MDT" duration-ms="8541" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userMenuDropDown_TC05 -->
+        <test-method is-config="true" signature="removeDriver()[pri:0, instance:test.UserMenuTest@2dd29a59]" started-at="2023-05-24T12:34:06 MDT" name="removeDriver" finished-at="2023-05-24T12:34:06 MDT" duration-ms="185" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeDriver -->
+        <test-method is-config="true" signature="setDriver()[pri:0, instance:test.UserMenuTest@2dd29a59]" started-at="2023-05-24T12:34:06 MDT" name="setDriver" finished-at="2023-05-24T12:34:07 MDT" duration-ms="740" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriver -->
+        <test-method signature="userMenuLogout_Tc_09(java.lang.reflect.Method)[pri:0, instance:test.UserMenuTest@2dd29a59]" started-at="2023-05-24T12:34:07 MDT" name="userMenuLogout_Tc_09" finished-at="2023-05-24T12:34:16 MDT" duration-ms="9401" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.UserMenuTest.userMenuLogout_Tc_09(java.lang.reflect.Method) throws java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userMenuLogout_Tc_09 -->
+        <test-method is-config="true" signature="removeDriver()[pri:0, instance:test.UserMenuTest@2dd29a59]" started-at="2023-05-24T12:34:16 MDT" name="removeDriver" finished-at="2023-05-24T12:34:16 MDT" duration-ms="194" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeDriver -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.UserMenuTest@2dd29a59]" started-at="2023-05-24T12:34:16 MDT" name="tearDown" finished-at="2023-05-24T12:34:17 MDT" duration-ms="575" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.UserMenuTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
