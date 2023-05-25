@@ -12,7 +12,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.8.1</version>
+					<version>3.8.0</version>
 					<configuration>
 						<source>1.8</source>
 						<target>1.8</target>
@@ -79,13 +79,14 @@
 			<version>2.18.0</version>
 		</dependency>
 
-		<!-- https://bonigarcia.dev/webdrivermanager/-->
+		<!-- https://bonigarcia.dev/webdrivermanager/
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
 			<version>5.2.3</version>
 			<scope>test</scope>
 		</dependency>
+		-->
 
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 		<dependency>

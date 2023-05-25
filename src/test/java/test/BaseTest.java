@@ -1,6 +1,7 @@
 package test;
 
 import java.io.IOException;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -8,7 +9,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
@@ -18,9 +18,6 @@ import org.testng.annotations.Parameters;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
-import utils.PropertyReader;
 
 public class BaseTest {
 
@@ -44,7 +41,7 @@ public class BaseTest {
 	@BeforeMethod
 	public void setDriver(String localbrowser) throws IOException {
 		log.info("setDriver()......Initialization");
-		WebDriver driver = BaseTest.getBrowserDriver(localbrowser);
+		WebDriver driver = BaseTest.getBrowserDriver(localbrowser, false);
 		threadLocalDriver.set(driver); // sets the local copy for the browser driver.
 		log.info("setDriver()......Successfully done");
 	}
@@ -79,44 +76,40 @@ public class BaseTest {
 		extent.attachReporter(spark);
 	}
 
-	public static WebDriver getBrowserDriver(String browsername) {
+	public static WebDriver getBrowserDriver(String browsername, boolean headless) {
+
+		String browser = browsername.toLowerCase();
 		WebDriver driver = null;
-		if (browsername.toLowerCase().contains("chrome")) {
-			driver = new ChromeDriver();
-		} else if (browsername.toLowerCase().contains("microsoftedge")) {
-			driver = new EdgeDriver();
-		} else if (browsername.toLowerCase().contains("firefox")) {
-			driver = new FirefoxDriver();
+		switch (browser) {
+
+		case "chrome":
+
+			if (headless) {
+				ChromeOptions co = new ChromeOptions();
+				co.addArguments("--headless");
+				driver = new ChromeDriver(co);
+			} else {
+				driver = new ChromeDriver();
+			}
+			break;
+
+		case "edge":
+
+			if (headless) {
+				EdgeOptions eo = new EdgeOptions();
+				eo.addArguments("--headless");
+				driver = new EdgeDriver(eo);
+			} else {
+				driver = new EdgeDriver();
+			}
+			break;
+
+		default:
+			System.out.println("Please use either Chrome or edge broswer");
+
 		}
 		driver.manage().window().maximize();
 		return driver;
-
-		
-		
-//		String browser = browsername.toLowerCase();
-//		WebDriver driver = null;
-//		switch (browser) {
-//		case "chrome":
-//			WebDriverManager.chromedriver().setup();
-//			driver = new ChromeDriver();
-//			break;
-//
-//		case "Edge":
-//			WebDriverManager.edgedriver().setup();
-//			driver = new EdgeDriver();
-//			break;
-//			
-//		case "firefox":
-//			WebDriverManager.firefoxdriver().setup();
-//			driver = new FirefoxDriver();
-//			break;
-//
-//		default:
-//			System.out.println("Please use either Chrome or edge broswer");
-//
-//		}
-//		driver.manage().window().maximize();
-//		return driver;
 
 	}
 

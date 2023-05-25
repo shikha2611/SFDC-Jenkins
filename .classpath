@@ -29,5 +29,15 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="/sfdcFramework"/>
+	<classpathentry kind="lib" path="C:/Users/kaush/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.8.2/selenium-edge-driver-4.8.2.jar" sourcepath="C:/Users/kaush/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.8.2/selenium-edge-driver-4.8.2-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.seleniumhq.selenium"/>
+			<attribute name="maven.artifactId" value="selenium-edge-driver"/>
+			<attribute name="maven.version" value="4.8.2"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
