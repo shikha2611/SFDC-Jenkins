@@ -27,13 +27,20 @@
 							<suiteXmlFile>LogiMyprofileParallelTestng.xml</suiteXmlFile>
 						</suiteXmlFiles>
 						<!-- passing parameter through POM.xml, this will act as
-						system variables, we have made cutome tag with name
-						browser and the key is {Browser} and the value will be dynamic which we pass through jenkins. This all is being done to pass the value through Jenkins-->
+						system variables, we have made custom tag(it can be any
+						name), here it is with name
+						browser and the key
+						is {Browser} and the value will be
+						dynamic which
+						we pass through jenkins. This all is being
+						mvn
+						clean test -DBrowser=edge/chrome    (which ever
+						browser we want to choose).In -DBrowser  browser is the
+						key which we are passing  below in curly braces and will
+						give value to it. Value chould be edge or chrome-->
 						<systemPropertyVariables>
 							<browser>${Browser}</browser>
 						</systemPropertyVariables>
-
-
 					</configuration>
 				</plugin>
 			</plugins>
@@ -81,10 +88,10 @@
 
 		<!-- https://bonigarcia.dev/webdrivermanager/
 		<dependency>
-			<groupId>io.github.bonigarcia</groupId>
-			<artifactId>webdrivermanager</artifactId>
+		<groupId>io.github.bonigarcia</groupId>
+		<artifactId>webdrivermanager</artifactId>
 			<version>5.2.3</version>
-			<scope>test</scope>
+		<scope>test</scope>
 		</dependency>
 		-->
 

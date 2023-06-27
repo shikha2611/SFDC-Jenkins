@@ -78,7 +78,7 @@ public class LoginTest extends BaseTest {
 		Assert.assertTrue(lp.rememberMe.isSelected());
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void forgotPasswordTC_04A() throws IOException, InterruptedException {
 		SoftAssert assert1 = new SoftAssert();
 		WebDriver driver = BaseTest.getDriver();

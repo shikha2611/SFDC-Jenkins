@@ -198,6 +198,7 @@ public class LoginPage  extends BasePage{
 	}
 
 	public boolean launchApp(WebDriver driver) throws IOException {
+	
 		driver.get(PropertyReader.readAppLaunchUrl("application_url"));
 		test.pass("App launched successfully");
 		return true;
